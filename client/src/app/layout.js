@@ -1,8 +1,8 @@
 // client/src/app/layout.js
-import './globals.css'; // Your global Tailwind CSS file
+import './globals.css'; 
 import { Inter } from 'next/font/google';
-import Header from '../components/Header'; // Import the new Header component
-import Footer from '../components/Footer'; // Assuming you have your Footer component here
+import Header from '../components/Header';
+import Footer from '../components/Footer'; 
 
 const inter = Inter({ subsets: ['latin'] });
 
