@@ -4,17 +4,14 @@ import { useEffect, useState } from 'react'
 import HeroCarousel from '../components/HeroCarousel'
 import ProductCard from '../components/ProductCard'
 import AnimatedButton from '../components/AnimatedButton'
-import Link from 'next/link' // Import Link for navigation
+import Link from 'next/link' 
 
-// Define your collection data statically here
-// IMPORTANT: The 'categorySlug' here must match the 'category' values you set in your database
-// For example, if your database has 'Necklaces', use 'Necklaces' here.
 const shopFromOurCollections = [
   {
     id: 1,
     name: 'BRACELETS',
-    imageUrl: '/Bracelete.jpg', // Path to your static image in public folder
-    categorySlug: 'Bracelets', // This will be used in the URL and sent to backend for filtering
+    imageUrl: '/Bracelete.jpg', 
+    categorySlug: 'Bracelets', 
   },
   {
     id: 2,
@@ -49,7 +46,7 @@ export default function Home() {
 
   // Slice products for different sections
   const previewItems = products.slice(0, 6)
-  const newInItems = products.slice(6, 12) // This was commented out in a previous version, but is good for future use.
+  const newInItems = products.slice(6, 12) 
 
   return (
     <main>
