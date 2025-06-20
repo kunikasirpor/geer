@@ -25,7 +25,7 @@ Backend:
 Node.js
 Express.js
 Database: 
-MySql
+MySql / Json Data
 
 
 # How to Run the Project
