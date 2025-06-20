@@ -33,10 +33,11 @@ Follow these steps to set up and run the project locally:
 
 1) Clone the repository:
 git clone https://github.com/kunikasirpor/geer
+
 cd geer
 
 
-2) Start the Backend Server:
+3) Start the Backend Server:
 cd backend
 npm install
 npm start
