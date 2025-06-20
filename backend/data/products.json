@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "XOXO NECKLACE",
+    "price": 13499.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/the-xoxo-necklace_1296x.webp?v=1718051374",
+    "altImage": "https://epjewels.co/cdn/shop/files/the-xoxo-necklace2_1296x.webp?v=1725403365",
+    "reviews": 3,
+    "status": "available",
+    "description": "Elevate your style with the XOXO Necklace from KS Jewels, a chic and romantic piece featuring a playful XOXO design. Crafted with precision by Kunika, this necklace comes with a sleek Box Chain option, perfect for layering or wearing solo",
+    "category": "necklaces"
+  },
+  {
+    "id": 2,
+    "name": "SMILEY RING",
+    "price": 9899.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/91_1296x.png?v=1745477541",
+    "altImage": "https://epjewels.co/cdn/shop/files/IMG_1437_1296x.jpg?v=1745477541",
+    "reviews": 5,
+    "status": "available",
+    "description": "A playful Smiley Ring crafted for instant charm. Its bold design adds a fun twist to everyday outfits, perfect for layering or standalone wear",
+    "category": "rings"
+  },
+  {
+    "id": 3,
+    "name": "CZ PAVE CUFF EARRING",
+    "price": 7899.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20231106_EP.JEWELRY_0459-copy_1296x.jpg?v=1725988419",
+    "altImage": "https://epjewels.co/cdn/shop/files/image_9061b525-dc3d-4711-8375-9b840a5e4a5f_1296x.jpg?v=1718051767",
+    "reviews": 4,
+    "status": "available",
+    "description": "Sparkling CZ Pavé Cuff Earrings with intricate detailing. The dazzling stones catch the light effortlessly, ideal for both casual and evening looks.",
+    "category": "earrings"
+  },
+  {
+    "id": 4,
+    "name": "MULTICOLOR TENNIS BRACELET",
+    "price": 6599.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20241203_EP.JEWELS_3916_copy_1_1296x.jpg?v=1734639702",
+    "altImage": "https://epjewels.co/cdn/shop/files/8C6DB6A6-633E-453D-B7BB-8C507F028F08_1296x.jpg?v=1738083561",
+    "reviews": 7,
+    "status": "available",
+    "description": "Make a bold statement with this vibrant Multicolor Tennis Bracelet, featuring an eye-catching array of colors for a playful yet elegant look. Perfect for adding a pop of color to any outfit.",
+    "category": "bracelets"
+  },
+  {
+    "id": 5,
+    "name": "CZ HAND CHAIN",
+    "price": 8999.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20240723_EP.JEWELS_45733copy2_1296x.jpg?v=1728592577",
+    "altImage": "https://epjewels.co/cdn/shop/files/538A693D-109D-4F56-88AF-9D12AC41948E_1296x.jpg?v=1727113373",
+    "reviews": 5,
+    "status": "available",
+    "description": "Delicate CZ Hand Chain adorned with shimmering cubic zirconia. A graceful addition to accentuate wrists, designed for versatility and elegance",
+    "category": "bracelets"
+  },
+  {
+    "id": 6,
+    "name": "iced kaete pave ring",
+    "price": 7699.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/9CCA2003-3C23-4E77-83F1-22CE0DBF1DFE_1200x1200.jpg?v=1742186015",
+    "altImage": "https://epjewels.co/cdn/shop/files/D4B116AE-7C1D-4C98-8295-E8F022D1B978_1200x1200.jpg?v=1742186015",
+    "reviews": 4,
+    "status": "available",
+    "description": "An Iced Kate Pavé Ring featuring a sleek pavé setting. Its minimalist brilliance makes it a timeless piece for stacking or solo statement wear",
+    "category": "rings"
+  },
+  {
+    "id": 7,
+    "name": "ICED JUMBO LETTER NECKLACE",
+    "price": 7988.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/gold-jumbo-letter-cz-initial-necklace_1080x.webp?v=1718035532",
+    "altImage": "https://epjewels.co/cdn/shop/files/IMG_2468_1080x.heic?v=1738693410",
+    "reviews": 6,
+    "status": "available",
+    "description": "The Iced Jumbo Letter Necklace is a bold and eye-catching accessory that makes a statement! It is available in all letters from A to Z, allowing you to personalize your necklace with your initial or the letter of your choice.",
+    "category": "necklaces"
+  },
+  {
+    "id": 8,
+    "name": "OVAL ECLIPSE TWO-TONE EARRING",
+    "price": 5799.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20250128_EPJEWELS_0027copy_1080x.jpg?v=1738263707",
+    "altImage": "https://epjewels.co/cdn/shop/files/70B4AA3E-56CC-4749-9C64-DA3F563D1A04_1080x.png?v=1742183198",
+    "reviews": 4,
+    "status": "available",
+    "description": "The Oval Eclipse Two-Tone Earring features an oval shape and a mix of contrasting metals, creating a bold, contemporary look. The combination of gold and silver tones adds sophistication, making them perfect for both everyday wear and special occasions.",
+    "category": "earrings"
+  },
+  {
+    "id": 9,
+    "name": "GREEN BUBBLE DANGLE EARRING",
+    "price": 4899.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20240314_EP.JEWELS_35849copy_1080x.jpg?v=1725990256",
+    "altImage": "https://epjewels.co/cdn/shop/files/green-bubble-dangle-earring1_1080x.jpg?v=1718051860",
+    "reviews": 9,
+    "status": "available",
+    "description": "The Green Bubble Dangle Earring is a beautiful and eye-catching accessory. These earrings feature a delicate design with a sterling silver base and 14k gold plating, giving them a luxurious and stylish look. The emerald green cubic zirconia stones add a ...",
+    "category": "earrings"
+  },
+  {
+    "id": 10,
+    "name": "DELANEY PINK TENNIS BRACELE",
+    "price": 7999.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/C8272CBA-F754-4CD7-A4EE-4A81D8CC8DA0_1080x.jpg?v=1726073934",
+    "altImage": "https://epjewels.co/cdn/shop/files/4F1D0CCF-8F40-4E1B-91F6-618151F0E8E9_1080x.jpg?v=1726032384",
+    "reviews": 10,
+    "status": "available",
+    "description": "The Delaney Pink Tennis Bracelet features radiant pink cubic zirconia stones & adds a touch of elegance and glamour to any outfit. Whether you’re dressing up for a special event or elevating your everyday look, the epjewels.com Delaney Pink Tennis Brac...",
+    "category": "bracelets"
+  },
+  {
+    "id": 11,
+    "name": "ICED EP TEDDY NECKLACE",
+    "price": 12999.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/20231024_EPJEWELRY_0020_copy_1080x.jpg?v=1725401646",
+    "altImage": "https://epjewels.co/cdn/shop/files/533A7B95-62FC-4480-84B1-ECE5573A88EF_1080x.jpg?v=1728572468",
+    "reviews": 56,
+    "status": "available",
+    "description": "The Iced EP Teddy Necklace is a meaningful piece of jewelry. It is made from sterling silver with a 14K gold plating, giving it a beautiful and luxurious appearance. The epjewels.com pendant features a cute teddy bear named \"OSO\" designed with the combin...",
+    "category": "necklaces"
+  },
+  {
+    "id": 12,
+    "name": "CZ TEARDROP NECKLACE",
+    "price": 5899.00,
+    "imageUrl": "https://epjewels.co/cdn/shop/files/26B34D33-8B7E-4E3A-A8FC-7FFABEFA3D3B_1080x.jpg?v=1713928657",
+    "altImage": "https://epjewels.co/cdn/shop/files/64B6D2C3-958D-412A-AE51-042DD2CA2DE0_1080x.jpg?v=1725467368",
+    "reviews": 3,
+    "status": "available",
+    "description": "The CZ Teardrop Necklace combines timeless elegance with modern sophistication. Made from 925 sterling silver and plated with 14k gold, this necklace offers both durability and a luxurious finish. The CZ Teardrop Necklace combines timeless elegance with modern sophistication. Made from 925 sterling silver and plated with 14k gold, this necklace offers both durability and a luxurious finish. The pendant features a classic teardrop shape, enhanced with a sparkling cubic zirconia center stone. Perfect for any occasion, the epjewels.com CZ Teardrop Necklace adds a touch of enduring glamour to your ensemble, making it a versatile and stylish addition to your jewelry collection.",
+    "category": "necklaces"
+  }
+]
