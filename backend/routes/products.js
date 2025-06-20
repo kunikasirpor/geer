@@ -102,9 +102,9 @@ router.get('/', (req, res) => {
 
 // POST new product (This route remains unchanged)
 router.post('/', (req, res) => {
-    const { name, price, imageUrl, status, altImage, reviews, description, additionalImages, category } = req.body;
-    const query = 'INSERT INTO products (name, price, imageUrl, status, altImage, reviews, description, additionalImages, category) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    db.query(query, [name, price, imageUrl, status, altImage, reviews, description, JSON.stringify(additionalImages), category], (err, result) => {
+    const { name, price, imageUrl, status, altImage, reviews, description, category } = req.body;
+    const query = 'INSERT INTO products (name, price, imageUrl, status, altImage, reviews, description, category) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+    db.query(query, [name, price, imageUrl, status, altImage, reviews, description, category], (err, result) => {
         if (err) return res.status(500).json({ error: err.message });
         res.json({ message: 'Product added', productId: result.insertId });
     });
