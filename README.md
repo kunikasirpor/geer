@@ -24,7 +24,7 @@ Tailwind CSS
 Backend:
 Node.js
 Express.js
-Database/Data Storage:
+Database: 
 MySql
 
 
