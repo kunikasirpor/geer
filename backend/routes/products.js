@@ -1,6 +1,123 @@
 // backend/routes/products.js
+// if using dummy data 
 
 import express from 'express';
+import productsData from '../data/products.json' with { type: 'json' };
+
+const router = express.Router();
+
+// Middleware to log all product route requests
+router.use((req, res, next) => {
+    console.log(`Products route: ${req.method} ${req.originalUrl}`);
+    next();
+});
+
+
+// Search Endpoint
+router.get('/search', (req, res) => {
+    const searchTerm = req.query.q ? req.query.q.toLowerCase() : '';
+
+    if (!searchTerm) {
+        return res.status(400).json({ message: 'Search query parameter (q) is required.' });
+    }
+
+    const filteredProducts = productsData.filter(product =>
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm) ||
+        product.category.toLowerCase().includes(searchTerm)
+    );
+
+    if (filteredProducts.length === 0) {
+        return res.status(404).json({ message: 'No products found matching your search.' });
+    }
+    res.json(filteredProducts);
+});
+
+// GET products filtered by category
+router.get('/filter', (req, res) => {
+    console.log('--- Inside /api/products/filter route ---');
+    console.log('Backend received raw query params:', req.query);
+
+    const { category, limit } = req.query; 
+
+    let filteredProducts = productsData;
+
+    if (category) {
+        const queryCategory = category.toLowerCase(); 
+        filteredProducts = productsData.filter(product =>
+            product.category.toLowerCase() === queryCategory
+        );
+    }
+
+    // Apply limit if provided
+    if (limit) {
+        filteredProducts = filteredProducts.slice(0, parseInt(limit, 10));
+    }
+
+
+    console.log(`Backend: Found ${filteredProducts.length} products for category "${category}" (and limited to ${limit}).`);
+
+    if (filteredProducts.length === 0 && category) { // Only return 404 if a category was specified and no products
+        console.log('Backend: No products found for specified category, sending 404.');
+        return res.status(404).json({ message: 'Product not found' });
+    }
+    res.json(filteredProducts);
+});
+
+
+// GET a single product by ID
+router.get('/:id', (req, res) => {
+    const productId = parseInt(req.params.id, 10); // Parse ID as integer
+
+    const product = productsData.find(p => p.id === productId);
+
+    if (!product) {
+        return res.status(404).json({ message: 'Product not found' });
+    }
+    res.json(product);
+});
+
+// GET all products
+router.get('/', (req, res) => {
+    res.json(productsData);
+});
+
+// POST new product (dummy implementation for JSON data)
+router.post('/', (req, res) => {
+
+    const newProduct = {
+        id: productsData.length > 0 ? Math.max(...productsData.map(p => p.id)) + 1 : 1,
+        ...req.body,
+        status: req.body.status || 'available', // Default status
+        reviews: req.body.reviews || 0, // Default reviews
+        description: req.body.description || '', // Default description
+        category: req.body.category || 'misc' // Default category
+    };
+    productsData.push(newProduct); // Add to in-memory array
+    res.status(201).json({ message: 'Product added', product: newProduct });
+});
+
+// DELETE a product (dummy implementation for JSON data)
+router.delete('/:id', (req, res) => {
+    const productId = parseInt(req.params.id, 10);
+    const initialLength = productsData.length;
+    // Filter out the product to be deleted
+    const updatedProducts = productsData.filter(p => p.id !== productId);
+
+    if (updatedProducts.length === initialLength) {
+        return res.status(404).json({ message: 'Product not found' });
+    }
+    // Replace the in-memory array with the filtered one
+    productsData.splice(0, productsData.length, ...updatedProducts);
+    res.json({ message: 'Product deleted' });
+});
+
+
+export default router;
+
+//if using my sql
+
+/*import express from 'express';
 import { db } from '../db.js';
 
 const router = express.Router();
@@ -120,4 +237,4 @@ router.delete('/:id', (req, res) => {
 });
 
 
-export default router;
+export default router;*/
