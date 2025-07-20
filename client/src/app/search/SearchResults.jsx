@@ -35,13 +35,8 @@ export default function SearchResults() {
       .finally(() => setLoading(false));
   }, [searchQuery]);
 
-  if (loading) {
-    return <div className="text-center py-10">Searching for "{searchQuery}"...</div>;
-  }
-
-  if (error) {
-    return <div className="text-center py-10 text-red-500">Error fetching search results: {error.message}</div>;
-  }
+  if (loading) return <div className="text-center py-10">Searching for "{searchQuery}"...</div>;
+  if (error) return <div className="text-center py-10 text-red-500">Error: {error.message}</div>;
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -49,7 +44,7 @@ export default function SearchResults() {
         Search Results for "{searchQuery}"
       </h1>
       {products.length === 0 ? (
-        <p className="text-center text-gray-600">No products found matching your search.</p>
+        <p className="text-center text-gray-600">No products found.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map(prod => (
