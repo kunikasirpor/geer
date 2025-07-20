@@ -1,11 +1,23 @@
-'use client' 
-import { Suspense } from 'react'
-import SearchResults from './SearchResults'
+'use client'
+import { useSearchParams } from 'next/navigation'
+import React, { Suspense } from 'react'
+
+function SearchComponent() {
+  const searchParams = useSearchParams()
+  const query = searchParams.get('q')
+
+  return (
+    <div>
+      <h1>Search Page</h1>
+      <p>Query: {query}</p>
+    </div>
+  )
+}
 
 export default function Page() {
   return (
-    <Suspense fallback={<div className="text-center py-10">Loading search results...</div>}>
-      <SearchResults />
+    <Suspense fallback={<div>Loading search...</div>}>
+      <SearchComponent />
     </Suspense>
   )
 }
