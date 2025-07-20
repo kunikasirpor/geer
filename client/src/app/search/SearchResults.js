@@ -1,13 +1,12 @@
-// client/src/app/search/page.js
 'use client'
 
-import { useEffect, useState } from 'react'; // FIXED: Correct import for useState and useEffect
-import { useSearchParams } from 'next/navigation'; // For reading URL query parameters
-import ProductCard from '../../components/ProductCard'; // Re-use your ProductCard component
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import ProductCard from '../../components/ProductCard';
 
-export default function SearchResultsPage() {
+export default function SearchResults() {
   const searchParams = useSearchParams();
-  const searchQuery = searchParams.get('query'); // Get the 'query' parameter from the URL
+  const searchQuery = searchParams.get('query');
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,32 +15,25 @@ export default function SearchResultsPage() {
   useEffect(() => {
     if (!searchQuery) {
       setLoading(false);
-      setProducts([]); // No query, no results
+      setProducts([]);
       return;
     }
 
     setLoading(true);
     setError(null);
 
-    // Fetch products based on the search query
     fetch(`http://localhost:5000/api/products/search?q=${encodeURIComponent(searchQuery)}`)
       .then(res => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
       })
-      .then(data => {
-        setProducts(data);
-      })
+      .then(data => setProducts(data))
       .catch(e => {
         console.error("Failed to fetch search results:", e);
         setError(e);
       })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [searchQuery]); // Re-run effect if search query changes
+      .finally(() => setLoading(false));
+  }, [searchQuery]);
 
   if (loading) {
     return <div className="text-center py-10">Searching for "{searchQuery}"...</div>;
@@ -66,7 +58,7 @@ export default function SearchResultsPage() {
               product={{
                 id: prod.id,
                 name: prod.name,
-                image: prod.imageUrl, // Map imageUrl from backend to 'image' for ProductCard
+                image: prod.imageUrl,
                 altImage: prod.altImage,
                 price: prod.price,
                 reviews: prod.reviews
