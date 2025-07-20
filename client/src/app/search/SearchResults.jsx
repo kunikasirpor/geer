@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -23,12 +23,12 @@ export default function SearchResults() {
     setError(null);
 
     fetch(`http://localhost:5000/api/products/search?q=${encodeURIComponent(searchQuery)}`)
-      .then(res => {
+      .then((res) => {
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
       })
-      .then(data => setProducts(data))
-      .catch(e => {
+      .then((data) => setProducts(data))
+      .catch((e) => {
         console.error("Failed to fetch search results:", e);
         setError(e);
       })
@@ -47,7 +47,7 @@ export default function SearchResults() {
         <p className="text-center text-gray-600">No products found.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map(prod => (
+          {products.map((prod) => (
             <ProductCard
               key={prod.id}
               product={{
